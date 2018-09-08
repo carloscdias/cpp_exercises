@@ -26,7 +26,7 @@ main(int argc, char *argv[])
   std::for_each(vector.begin(), vector.end(), print_element);
 
   // partition between even and odd numbers
-  std::vector<int>::iterator odd_numbers = std::stable_partition(vector.begin(), vector.end(), [](int x) { return (x % 2) == 0; });
+  auto odd_numbers = std::stable_partition(vector.begin(), vector.end(), [](int x) { return (x % 2) == 0; });
 
   std::cout << std::endl << "Even numbers" << std::endl;
   // print even numbers
